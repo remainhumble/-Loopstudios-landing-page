@@ -104,16 +104,34 @@ header {
 main {
   padding: 20px;
   text-align: center;
-}
+  .image-interactive {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 
-.image-interactive {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  .interactive p {
+    color: grey;
+  }
 
-.interactive p {
-  color: $grey-200;
+  .layout {
+    padding: 0;
+  }
+
+  .layout li {
+    border: 1px solid red;
+    padding: 20px;
+    list-style: none;
+    text-transform: $uppercase;
+    font-weight: $fw400;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .layout li h4 {
+  max-width: 80px;
+    font-size: 16px;
+  }
 }
 
 footer {
