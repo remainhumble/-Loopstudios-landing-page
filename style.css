@@ -70,7 +70,6 @@ header h1 {
 .menu-button {
   background: transparent;
   border: none;
-  padding: 0.25rem;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -80,6 +79,57 @@ header h1 {
   outline: 2px solid hsl(0, 0%, 100%);
   outline-offset: 4px;
   border-radius: 4px;
+}
+
+#mobile-menu {
+  display: none;
+  height: 100vh;
+  background-color: hsl(0, 0%, 0%);
+  padding: 23px 13px;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 9;
+}
+#mobile-menu #top-part {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#mobile-menu #top-part .close-button {
+  background: transparent;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+#mobile-menu .mobile-navigation {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#mobile-menu .mobile-navigation ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#mobile-menu .mobile-navigation ul li {
+  padding: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+#mobile-menu .mobile-navigation ul li a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+#mobile-menu .mobile-navigation ul li:hover {
+  border-bottom: 2px solid hsl(0, 0%, 100%);
 }
 
 main {
@@ -230,6 +280,9 @@ footer span {
     background-image: url("./images/desktop/image-hero.jpg");
     display: flex;
     align-items: flex-start;
+  }
+  header #mobile-menu {
+    display: none;
   }
   header h1 {
     max-width: 445px;

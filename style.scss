@@ -82,7 +82,6 @@ header {
 .menu-button {
   background: transparent;
   border: none;
-  padding: 0.25rem;
   display: inline-flex;
   align-items: center;
   cursor: pointer;
@@ -92,6 +91,57 @@ header {
   outline: 2px solid $white;
   outline-offset: 4px;
   border-radius: 4px;
+}
+
+#mobile-menu {
+  display: none;
+  height: 100vh;
+  background-color: $black;
+  padding: 23px 13px;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 9;
+  #top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    .close-button {
+      background: transparent;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+  .mobile-navigation {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      list-style: $lsnone;
+      li {
+        padding: 10px;
+        font-family: $font-josefin;
+        text-transform: $uppercase;
+        font-weight: $fw300;
+      }
+      li a {
+        color: $white;
+        text-decoration: none;
+      }
+      li:hover {
+        border-bottom: 2px solid $white;
+      }
+    }
+  }
 }
 
 main {
@@ -259,6 +309,9 @@ footer {
     background-image: url("./images/desktop/image-hero.jpg");
     display: flex;
     align-items: flex-start;
+    #mobile-menu {
+      display: none;
+    }
     h1 {
       max-width: 445px;
       font-size: 48px;
