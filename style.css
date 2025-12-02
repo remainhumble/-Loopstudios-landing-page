@@ -57,6 +57,9 @@ header h1 {
   margin: 0 auto;
   z-index: 10;
 }
+.site-header .primary-navigation {
+  display: none;
+}
 
 .logo {
   width: 110px;
@@ -220,4 +223,43 @@ footer .social-media li:hover {
 }
 footer span {
   color: grey;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    background-image: url("./images/desktop/image-hero.jpg");
+    display: flex;
+    align-items: flex-start;
+  }
+  header h1 {
+    max-width: 445px;
+    font-size: 48px;
+    margin: 75px;
+  }
+  .site-header .logo {
+    width: initial;
+  }
+  .site-header .menu-button {
+    display: none;
+  }
+  .site-header .primary-navigation {
+    display: flex;
+  }
+  .site-header .primary-navigation ul {
+    display: inline-flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .site-header .primary-navigation ul li {
+    padding: 10px;
+  }
+  .site-header .primary-navigation ul li a {
+    color: hsl(0, 0%, 100%);
+    text-decoration: none;
+  }
+  .site-header .primary-navigation ul li:hover {
+    border-bottom: 2px solid hsl(0, 0%, 100%);
+  }
 }/*# sourceMappingURL=style.css.map */
