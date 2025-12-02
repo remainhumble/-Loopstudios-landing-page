@@ -148,8 +148,12 @@ main .interactive-description p {
   color: #696969;
 }
 main #our-creations {
-  margin-top: 80px;
-  margin-bottom: 40px;
+  margin: 0 auto;
+  max-width: 900px;
+  flex-direction: row;
+}
+main #our-creations .see-all-button-desktop {
+  display: none;
 }
 main .layout {
   padding: 0;
@@ -219,7 +223,8 @@ main .layout li:nth-child(8) {
   background-size: cover;
   background-position: center;
 }
-main .see-all-button-mobile {
+main .see-all-button-mobile,
+main .see-all-button-desktop {
   margin: 40px 0;
   padding: 8px 36px;
   border: 2px solid gray;
@@ -230,7 +235,8 @@ main .see-all-button-mobile {
   font-weight: 400;
   cursor: pointer;
 }
-main .see-all-button-mobile:hover {
+main .see-all-button-mobile:hover,
+main .see-all-button-desktop:hover {
   background: hsl(0, 0%, 0%);
   color: hsl(0, 0%, 100%);
   border: 2px solid hsl(0, 0%, 0%);
@@ -345,8 +351,22 @@ footer span {
   main .interactive .interactive-description p {
     text-align: left;
   }
+  main #our-creations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main #our-creations .see-all-button-desktop {
+    display: inline-block;
+  }
+  main #our-creations .see-all-button-mobile {
+    display: none;
+  }
+  main .see-all-button-mobile {
+    display: none;
+  }
   main .layout {
-    margin: 0 auto;
+    margin: 0 auto 75px;
     max-width: 900px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
