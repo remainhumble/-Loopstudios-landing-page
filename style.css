@@ -422,4 +422,26 @@ footer span {
     background-size: cover;
     background-position: center;
   }
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  footer ul {
+    margin: 0;
+  }
+  footer #left-side {
+    align-items: flex-start;
+  }
+  footer #left-side ul {
+    display: inline-flex;
+  }
+  footer #left-side .logo {
+    width: initial;
+    margin-left: 15px;
+  }
+  footer #right-side {
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

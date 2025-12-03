@@ -472,4 +472,27 @@ footer {
       }
     }
   }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    ul {
+      margin: 0;
+    }
+    #left-side {
+      align-items: flex-start;
+      ul {
+        display: inline-flex;
+      }
+      .logo {
+        width: initial;
+        margin-left: 15px;
+      }
+    }
+    #right-side {
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+  }
 }
